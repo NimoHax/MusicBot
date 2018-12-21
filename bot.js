@@ -120,7 +120,7 @@ ${videos.map(video2 => `**${++index}-** ${video2.title}`).join('\n')}
                     }catch(err){
                         console.error(err);
                         var embedplay6 = new Discord.RichEmbed()
-                            .setTitle(`**Es wurde keine oder eine invalide Zahl eingegeben. Abbruch der Songauswahl!**`)
+                            .setTitle(`**no or invalid number was entered. Demolition of the song selection!**`)
                             .setColor([226, 50, 41])
                         return msg.channel.sendEmbed(embedplay6);
                     }
