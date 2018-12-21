@@ -92,7 +92,7 @@ client.on('message', async msg => { // eslint-disable-line
                 await handleVideo(video2, msg, voiceChannel, true);
             }
             var embedplay4 = new Discord.RichEmbed()
-                .setTitle(`**Playlist: ${playlist.title} wurde der Warteschlange hinzugefügt!**`)
+                .setTitle(`**Playlist: ${playlist.title} queued!**`)
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedplay4);
         }else{
