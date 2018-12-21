@@ -292,7 +292,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
     else if(msg.content.startsWith(`${PREFIX}unmute`)){
         if(!serverQueue){
             var embedunmute1 = new Discord.RichEmbed()
-                .setTitle(`**Es spielt im Moment nichts!**`)
+                .setTitle(`**It does nothing at the moment!**`)
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedunmute1);     
         }
