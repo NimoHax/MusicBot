@@ -166,7 +166,7 @@ ${videos.map(video2 => `**${++index}-** ${video2.title}`).join('\n')}
         }
         if(!serverQueue){
             var embedstop2 = new Discord.RichEmbed()
-                .setTitle(`**Es gibt nichts zum stoppen!**`)
+                .setTitle(`**There is nothing to stop!**`)
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedstop2);
         }
