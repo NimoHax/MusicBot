@@ -226,7 +226,7 @@ Link: ${serverQueue.songs[0].url}
     else if(msg.content.startsWith(`${PREFIX}queue`)){
         if(!serverQueue){
             var embedqueue1 = new Discord.RichEmbed()
-                .setTitle(`**Es spielt im Moment nichts!**`)
+                .setTitle(`**It does nothing at the moment!**`)
                 .setColor([226, 50, 41])
         return msg.channel.sendEmbed(embedqueue1);
         }
