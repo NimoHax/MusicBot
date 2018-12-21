@@ -203,7 +203,7 @@ Link: ${serverQueue.songs[0].url}
             return msg.channel.sendEmbed(embedvolume1);}
         if(!args[1]){
              var embedvolume2 = new Discord.RichEmbed()
-                .setTitle(`**Die aktuelle Lautstärke beträgt: ${serverQueue.volume}**`)
+                .setTitle(`**The current volume is: ${serverQueue.volume}**`)
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedvolume2);
         }
