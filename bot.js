@@ -284,7 +284,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
             serverQueue.mute = true;
             serverQueue.connection.dispatcher.setVolume(0 / 2000);
             var embedmute3 = new Discord.RichEmbed()
-                .setTitle(`**Der Musik Bot wurde gemuted!**`)
+                .setTitle(`**The music Bot was muted!**`)
                 .setColor([226, 50, 41])
         return msg.channel.sendEmbed(embedmute3);
         }
