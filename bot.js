@@ -235,7 +235,7 @@ Link: ${serverQueue.songs[0].url}
                 .setDescription(`
 ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
 
-**Am spielen:** ${serverQueue.songs[0].title}`)
+**Playing:** ${serverQueue.songs[0].title}`)
                 .setColor([226, 50, 41])
         return msg.channel.sendEmbed(embedqueue2);
     }
