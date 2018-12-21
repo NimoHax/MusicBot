@@ -73,7 +73,7 @@ client.on('message', async msg => { // eslint-disable-line
         const permissions = voiceChannel.permissionsFor(msg.client.user);
         if(!permissions.has('CONNECT')){
             var embedplay2 = new Discord.RichEmbed()
-                .setTitle(`**Mir fehlt das Recht CONNECT, um in diesen VoiceChannel zu connecten!**`)
+                .setTitle(`**I lack the right CONNECT to connect in these Voice Channel!**`)
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedplay2);
         }
