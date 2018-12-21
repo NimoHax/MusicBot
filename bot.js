@@ -32,7 +32,7 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
   } else if(newUserChannel === undefined){
 
     // User leaves a voice channel
-      if(oldMember.id === '428159852213174272'){
+      if(oldMember.id === '514856260353392660'){
           return console.log("BOT");
       }
       else{
@@ -66,7 +66,7 @@ client.on('message', async msg => { // eslint-disable-line
         const voiceChannel = msg.member.voiceChannel;
         if(!voiceChannel){
             var embedplay1 = new Discord.RichEmbed()
-                .setTitle(`**Man muss in einem VoiceChannel sein um Musik abspielen zu können!**`)
+                .setTitle(`**Please Connect To A Voice Channel To Playing Something!**`)
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedplay1);
         }
