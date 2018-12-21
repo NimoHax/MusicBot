@@ -198,7 +198,7 @@ Link: ${serverQueue.songs[0].url}
     else if(msg.content.startsWith(`${PREFIX}volume`)){
         if(!serverQueue){
             var embedvolume1 = new Discord.RichEmbed()
-                .setTitle(`**Es spielt im Moment nichts!**`)
+                .setTitle(`**It does nothing at the moment!**`)
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedvolume1);}
         if(!args[1]){
