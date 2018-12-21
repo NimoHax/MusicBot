@@ -263,14 +263,14 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
         return msg.channel.sendEmbed(embedresume1);           
         }
         var embedresume2 = new Discord.RichEmbed()
-            .setTitle(`**Es spielt im Moment nichts!**`)
+            .setTitle(`**It does nothing at the moment!**`)
             .setColor([226, 50, 41])
         return msg.channel.sendEmbed(embedresume2);
     }   
     else if(msg.content.startsWith(`${PREFIX}mute`)){
         if(!serverQueue){
         var embedmute1 = new Discord.RichEmbed()
-                .setTitle(`**Es spielt im Moment nichts!**`)
+                .setTitle(`**It does nothing at the moment!**`)
                 .setColor([226, 50, 41])
         return msg.channel.sendEmbed(embedmute1);     
         }
