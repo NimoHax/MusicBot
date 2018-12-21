@@ -244,7 +244,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
         serverQueue.playing = false;
         serverQueue.connection.dispatcher.pause();
         var embedpause1 = new Discord.RichEmbed()
-                .setTitle(`**Das Lied wird angehalten!**`)
+                .setTitle(`**The song is stopped!**`)
                 .setColor([226, 50, 41])
         return msg.channel.sendEmbed(embedpause1);
         }
