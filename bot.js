@@ -367,7 +367,7 @@ async function handleVideo(video, msg, voiceChannel, playlist=false){
             console.log(error);
             queue.delete(msg.guild.id);
             var embedfunc1 = new Discord.RichEmbed()
-                .setTitle(`**Bot konnte dem VoiceChannel nicht joinen!**`)
+                .setTitle(`**Bot could not VoiceChannel the joinen!**`)
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedfunc1);
         }
