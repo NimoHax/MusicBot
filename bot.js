@@ -129,7 +129,7 @@ ${videos.map(video2 => `**${++index}-** ${video2.title}`).join('\n')}
                 }catch(err){
                     console.error(err);
                     var embedplay7 = new Discord.RichEmbed()
-                        .setTitle(`**Ich konnte kein Video finden!**`)
+                        .setTitle(`**I could find no video!**`)
                         .setColor([226, 50, 41])
                     return msg.channel.sendEmbed(embedplay7);
                 }
@@ -140,7 +140,7 @@ ${videos.map(video2 => `**${++index}-** ${video2.title}`).join('\n')}
     } else if(msg.content.startsWith(`${PREFIX}skip`)) {
         if(!msg.member.voiceChannel){
            var embedskip1 = new Discord.RichEmbed()
-                .setTitle(`**Du bist in nicht in dem VoiceChannel!**`)
+                .setTitle(`**You are in not in the Voice Channel!**`)
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedskip1); 
         }
