@@ -218,7 +218,7 @@ Link: ${serverQueue.songs[0].url}
         return msg.channel.sendEmbed(embedvolume3);
         } else{
             var embedvolume4 = new Discord.RichEmbed()
-                .setTitle(`**Bitte gib eine Zahl >0 ein!**`)
+                .setTitle(`**Please enter a number >0 on!**`)
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedvolume4);
         }
