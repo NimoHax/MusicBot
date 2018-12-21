@@ -152,7 +152,7 @@ ${videos.map(video2 => `**${++index}-** ${video2.title}`).join('\n')}
         }
         serverQueue.connection.dispatcher.end('Skip command has been used!');
         var embedskip3 = new Discord.RichEmbed()
-            .setTitle(`**Der Song wurde übersprungen!**`)
+            .setTitle(`**The Bot has been Skipped!**`)
             .setColor([226, 50, 41])
         return msg.channel.sendEmbed(embedskip3);
     }   
@@ -173,7 +173,7 @@ ${videos.map(video2 => `**${++index}-** ${video2.title}`).join('\n')}
         serverQueue.songs = [];
         serverQueue.connection.dispatcher.end('Stop command has been used!');
         var embedstop3 = new Discord.RichEmbed()
-            .setTitle(`**The Bot Skipped!**`)
+            .setTitle(`**The Bot has been Skipped!**`)
             .setColor([226, 50, 41])
         return msg.channel.sendEmbed(embedstop3);
     }
