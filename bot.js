@@ -249,7 +249,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
         return msg.channel.sendEmbed(embedpause1);
         }
         var embedpause2 = new Discord.RichEmbed()
-            .setTitle(`**Es spielt im Moment nichts!**`)
+            .setTitle(`**It does nothing at the moment!**`)
             .setColor([226, 50, 41])
         return msg.channel.sendEmbed(embedpause2);
     }
