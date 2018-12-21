@@ -314,8 +314,8 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
     else if(msg.content.startsWith(`${PREFIX}help`)){
         var embedhelp = new Discord.RichEmbed()
             .setTitle(`__**Blackfox-MusicBot Commands**__`)
-            .addField(".play [YouTube Link/Playlist]", "Reiht das Lied in die Warteschlange", false)
-            .addField(".play [Suchbegriff(e)]", "Gibt 10 Suchergebnisse aus. Auswahl wird an Warteschlange angereiht", false)
+            .addField(".play [YouTube Link/Playlist]", "Usage: `^play` Description: To play See The YouTube Linke And playlist", false)
+            .addField(".play [Suchbegriff(e)]", "Usage: `^play`<song name> Description: To play Music", false)
             .addField(".skip", "Überspringt aktuellen Song", false)
             .addField(".stop", "Bot disconnected", false)
             .addField(".song", "Gibt den aktuell laufenden Song aus", false)
