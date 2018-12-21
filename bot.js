@@ -180,7 +180,7 @@ ${videos.map(video2 => `**${++index}-** ${video2.title}`).join('\n')}
     else if(msg.content.startsWith(`${PREFIX}song`)){
         if(!serverQueue){
             var embedsong1 = new Discord.RichEmbed()
-                .setTitle(`**Es spielt im Moment nichts!**`)
+                .setTitle(`**It does nothing at the moment!**`)
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedsong1);
                  }
