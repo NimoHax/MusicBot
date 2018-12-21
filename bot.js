@@ -66,7 +66,7 @@ client.on('message', async msg => { // eslint-disable-line
         const voiceChannel = msg.member.voiceChannel;
         if(!voiceChannel){
             var embedplay1 = new Discord.RichEmbed()
-                .setTitle(`**Please Connect To A Voice Channel To Playing Something!**`)
+                .setTitle(`**Please Connect To A Voice Channel To Play Something!**`)
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedplay1);
         }
@@ -313,7 +313,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
     }
     else if(msg.content.startsWith(`${PREFIX}help`)){
         var embedhelp = new Discord.RichEmbed()
-            .setTitle(`__**Musik Bot Commands**__`)
+            .setTitle(`__**Blackfox-MusicBot Commands**__`)
             .addField(".play [YouTube Link/Playlist]", "Reiht das Lied in die Warteschlange", false)
             .addField(".play [Suchbegriff(e)]", "Gibt 10 Suchergebnisse aus. Auswahl wird an Warteschlange angereiht", false)
             .addField(".skip", "Überspringt aktuellen Song", false)
