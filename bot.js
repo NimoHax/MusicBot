@@ -160,7 +160,7 @@ ${videos.map(video2 => `**${++index}-** ${video2.title}`).join('\n')}
      else if (msg.content.startsWith(`${PREFIX}stop`)){
         if(!msg.member.voiceChannel){
            var embedstop1 = new Discord.RichEmbed()
-                .setTitle(`**Du bist in nicht in dem VoiceChannel!**`)
+                .setTitle(`**you're not in the voice channel!**`)
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedstop1); 
         }
