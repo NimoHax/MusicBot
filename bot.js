@@ -43,7 +43,7 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
                         serverQueue.connection.dispatcher.end('No members left in the channel!')
                     }    
               }else{
-                  return console.log('nicht im gleichen voiceChannel');
+                  return console.log('not in the same voice channel');
               }
           }else{
               return undefined;
