@@ -103,7 +103,7 @@ client.on('message', async msg => { // eslint-disable-line
                     var videos = await youtube.searchVideos(searchString, 10);
                     let index = 0;
                     var embedqueue5 = new Discord.RichEmbed()
-                        .setTitle(`__**Song Auswahl**__`)
+                        .setTitle(`__**Song Play By Blackfox**__`)
                         .setDescription(`
 ${videos.map(video2 => `**${++index}-** ${video2.title}`).join('\n')}
 
@@ -146,7 +146,7 @@ ${videos.map(video2 => `**${++index}-** ${video2.title}`).join('\n')}
         }
         if(!serverQueue){
             var embedskip2 = new Discord.RichEmbed()
-                .setTitle(`**Es gibt nichts zum überspringen!**`)
+                .setTitle(`**There is nothing to Skip!**`)
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedskip2);
         }
