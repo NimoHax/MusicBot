@@ -258,7 +258,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
         serverQueue.playing = true;
         serverQueue.connection.dispatcher.resume();
         var embedresume1 = new Discord.RichEmbed()
-                .setTitle(`**Das Lied spielt weiter ab!**`)
+                .setTitle(`**The song keeps playing on!**`)
                 .setColor([226, 50, 41])
         return msg.channel.sendEmbed(embedresume1);           
         }
