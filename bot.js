@@ -377,7 +377,7 @@ async function handleVideo(video, msg, voiceChannel, playlist=false){
         if(playlist) return undefined;
         else{
             var embedfunc2 = new Discord.RichEmbed()
-                .setTitle(`**${song.title} wurde der Warteschlange hinzugefügt!**`)
+                .setTitle(`**${song.title} queued!**`)
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedfunc2);
         }
