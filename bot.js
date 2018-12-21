@@ -79,7 +79,7 @@ client.on('message', async msg => { // eslint-disable-line
         }
         if (!permissions.has('SPEAK')){
             var embedplay3 = new Discord.RichEmbed()
-                .setTitle(`**Mir fehlt das Recht SPEAK, um in diesen VoiceChannel zu connecten!**`)
+                .setTitle(`**I do not have the right to SPEAK to connect in these Voice Channel!**`)
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedplay3);
         }
