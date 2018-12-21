@@ -107,7 +107,7 @@ client.on('message', async msg => { // eslint-disable-line
                         .setDescription(`
 ${videos.map(video2 => `**${++index}-** ${video2.title}`).join('\n')}
 
-**Bitte gib eine Zahl zwischen 1-10 ein, um einen Song auszuwählen!**`)
+**Please enter a number between 1-10 on,a Song select!**`)
                 .setColor([226, 50, 41])
                     msg.channel.sendEmbed(embedqueue5);
                     
