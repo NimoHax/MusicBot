@@ -213,7 +213,7 @@ Link: ${serverQueue.songs[0].url}
         serverQueue.connection.dispatcher.setVolume(args[1] / 2000);
         serverQueue.mute = false;
         var embedvolume3 = new Discord.RichEmbed()
-                .setTitle(`**The volume is on ${args[1]} gesetzt**`)
+                .setTitle(`**The volume is on ${args[1]} set**`)
                 .setColor([226, 50, 41])
         return msg.channel.sendEmbed(embedvolume3);
         } else{
