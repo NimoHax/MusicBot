@@ -314,7 +314,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
     else if(msg.content.startsWith(`${PREFIX}help`)){
         var embedhelp = new Discord.RichEmbed()
             .setTitle(`__**Blackfox-MusicBot Commands**__`)
-            .addField(".play [YouTube Link/Playlist]", "Usage: `^play` Description: To play See The YouTube Linke And playlist.", false)
+            .addField(".play [YouTube Link/Playlist]", "Usage: `.play` Description: To play See The YouTube Linke And playlist.", false)
             .addField(".play [Suchbegriff(e)]", "Usage: `.play`<song name> Description: To play Music.", false)
             .addField(".skip", "Usage: `.skip` Description: To skip music.", false)
             .addField(".stop", "Usage: `.stop` Description: To Bot disconnected.", false)
