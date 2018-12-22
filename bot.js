@@ -321,7 +321,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
             .addField("^song", "Usage: `^song` Description: To Check The Current playing song.", false)
             .addField("^queue", "Usage: `^queue` Description: To Check The Queue List.", false)
             .addField("^volume", "Usage: `^volume` Description: To See Volume.", false)
-            .addField("^volume [Wert]", "Usage: `^volume` Description: To Increase Or Decrease song volume.", false)
+            .addField("^volume [Wert]", "Usage: `^volume` Description: To Changes the volume level to the specified value.", false)
             .addField("^pause", "Usage: `^pause` Description: To pause The Current Playing Song.", false)
             .addField("^resume", "Usage: `^resume` Description: To Resume The Paused Song.", false)
             .addField("^mute", "Usage: `^mute` Description: To mute Bot.", false)
