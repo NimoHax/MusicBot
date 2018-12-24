@@ -1,5 +1,5 @@
 {
-  "name": "MusikBot",
+  "name": "MusicBot",
   "description": "A MusicBot for Discord",
   "version": "0.0.0",
   "main": "bot.js",
