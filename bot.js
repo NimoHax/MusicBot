@@ -103,7 +103,7 @@ client.on('message', async msg => { // eslint-disable-line
                     var videos = await youtube.searchVideos(searchString, 10);
                     let index = 0;
                     var embedqueue5 = new Discord.RichEmbed()
-                        .setTitle(`__**Song Play By MultiVerse Official**__`)
+                        .setTitle(`__**Song Play By Blackfox**__`)
                         .setDescription(`
 ${videos.map(video2 => `**${++index}-** ${video2.title}`).join('\n')}
 
@@ -313,19 +313,19 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
     }
     else if(msg.content.startsWith(`${PREFIX}helpmusic`)){
         var embedhelp = new Discord.RichEmbed()
-            .setTitle(`__**MultiverseMusic Commands**__`)
-            .addField("mv!play [YouTube Link/Playlist]", "Usage: `mv!play` Description: To play See The YouTube Linke And playlist.", false)
-            .addField("mv!play [Suchbegriff(e)]", "Usage: `mv!play`<song name> Description: To play Music.", false)
-            .addField("mv!skip", "Usage: `mv!skip` Description: To skip music.", false)
-            .addField("mv!stop", "Usage: `mv!stop` Description: To Bot disconnected.", false)
-            .addField("mv!song", "Usage: `mv!song` Description: To Check The Current playing song.", false)
-            .addField("mv!queue", "Usage: `mv!queue` Description: To Check The Queue List.", false)
-            .addField("mv!volume", "Usage: `mv!volume` Description: To See Volume.", false)
-            .addField("mv!volume [Wert]", "Usage: `mv!volume` Description: To Changes the volume level to the specified value.", false)
-            .addField("mv!pause", "Usage: `mv!pause` Description: To pause The Current Playing Song.", false)
-            .addField("mv!resume", "Usage: `mv!resume` Description: To Resume The Paused Song.", false)
-            .addField("mv!mutemusic", "Usage: `mv!mutemusic` Description: To mute Bot.", false)
-            .addField("mv!unmutemusic", "Usage: `mv!unmutemusic` Description: To unmute Bot.", false)
+            .setTitle(`__**BlackfoxMusic Commands**__`)
+            .addField("^play [YouTube Link/Playlist]", "Usage: `^play` Description: To play See The YouTube Linke And playlist.", false)
+            .addField("^play [Suchbegriff(e)]", "Usage: `^play`<song name> Description: To play Music.", false)
+            .addField("^skip", "Usage: `^skip` Description: To skip music.", false)
+            .addField("^stop", "Usage: `^stop` Description: To Bot disconnected.", false)
+            .addField("^song", "Usage: `^song` Description: To Check The Current playing song.", false)
+            .addField("^queue", "Usage: `^queue` Description: To Check The Queue List.", false)
+            .addField("^volume", "Usage: `^volume` Description: To See Volume.", false)
+            .addField("^volume [Wert]", "Usage: `^volume` Description: To Changes the volume level to the specified value.", false)
+            .addField("^pause", "Usage: `^pause` Description: To pause The Current Playing Song.", false)
+            .addField("^resume", "Usage: `^resume` Description: To Resume The Paused Song.", false)
+            .addField("^mutemusic", "Usage: `^mutemusic` Description: To mute Bot.", false)
+            .addField("^unmutemusic", "Usage: `^unmutemusic` Description: To unmute Bot.", false)
             .setColor([226, 50, 41])
             .setThumbnail(client.user.avatarURL)
             return msg.channel.sendEmbed(embedhelp);
@@ -409,7 +409,7 @@ function play(guild, song){
     dispatcher.setVolume(serverQueue.volume / 2000);
     
     var embedfunction1 = new Discord.RichEmbed()
-                .setTitle(`** Begin ${song.title} to play.** __Note:__ **You should use mv!volume 2000 for better sound**`)
+                .setTitle(`** Begin ${song.title} to play.** __Note:__ **You should use ^volume 2000 for better sound**`)
                 .setColor([226, 50, 41])
             return serverQueue.textChannel.sendEmbed(embedfunction1);
 }
