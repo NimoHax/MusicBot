@@ -3,14 +3,10 @@ const { Client, Util} = require('discord.js');
 const config = require("./config.json");
 const YouTube = require('simple-youtube-api');
 const ytdl = require('ytdl-core');
-const wait = require('util').promisify(setTimeout);
-
 const client = new Client({ disableEveryone: true});
 
 const youtube = new YouTube(config.GOOGLE_API_KEY);
 const PREFIX = config.prefix;
-
-const invites = {};
 
 const queue = new Map();
 
@@ -56,23 +52,6 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
 
   }
 })
-
-client.on('guildMemberAdd', member => {
-  member.guild.fetchInvites().then(guildInvites => {
-   
-    const ei = invites[member.guild.id];
-  
-    invites[member.guild.id] = guildInvites;
-    
-    const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
-    
-    const inviter = client.users.get(invite.inviter.id);
-
-    const logChannel = member.guild.channels.find(channel => channel.id === "528112352642727947");
-   
-    logChannel.send(`<@${member.user.id}> **joined**; Invited By **${inviter.username}** (**${invite.uses}** Invites)`);
-  });
-});
 
 client.on('message', async msg => { // eslint-disable-line
     if (msg.author.bot) return undefined;
