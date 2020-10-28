@@ -6,7 +6,7 @@ const ytdl = require('ytdl-core');
 const client = new Client({ disableEveryone: true});
 
 const youtube = new YouTube(config.GOOGLE_API_KEY);
-const PREFIX = config.prefix;
+const PREFIX = (=) ;
 
 const queue = new Map();
 
