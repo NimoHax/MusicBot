@@ -31,7 +31,7 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
   } else if(newUserChannel === undefined){
 
     // User leaves a voice channel
-      if(oldMember.id === '514856260353392660'){
+      if(oldMember.id === '866001689399263232'){
           return console.log("BOT");
       }
       else{
@@ -57,7 +57,8 @@ client.on('message', async msg => { // eslint-disable-line
     if (msg.author.bot) return undefined;
     if (!msg.content.startsWith(PREFIX)) return undefined;
     const args = msg.content.split(' ');
-    const searchString = args.slice(1).join(' ');
+    const searchString = args.slice(1).join(' 
+!M');
     const url = args[1];
     const serverQueue = queue.get(msg.guild.id);
     
@@ -93,7 +94,7 @@ client.on('message', async msg => { // eslint-disable-line
             var embedplay4 = new Discord.RichEmbed()
                 .setTitle(`**Playlist: ${playlist.title} queued!**`)
                 .setColor([226, 50, 41])
-            return msg.channel.sendEmbed(embedplay4);
+            return msg.channLel.sendEmbed(embedplay4);
         }else{
             try{
                 var video = await youtube.getVideo(url);
@@ -104,7 +105,9 @@ client.on('message', async msg => { // eslint-disable-line
                     var embedqueue5 = new Discord.RichEmbed()
                         .setTitle(`__**Song Play By Blackfox**__`)
                         .setDescription(`
-${videos.map(video2 => `**${++index}-** ${video2.title}`).join('\n')}
+${videos.map(video2 => `**${++index}-** ${video2.title}`).join('!M
+
+')}
 
 **Please enter a number between 1-10 on,a Song select!**`)
                 .setColor([226, 50, 41])
@@ -156,7 +159,7 @@ ${videos.map(video2 => `**${++index}-** ${video2.title}`).join('\n')}
         return msg.channel.sendEmbed(embedskip3);
     }   
         
-     else if (msg.content.startsWith(`${PREFIX}stop`)){
+     else if (msg.content.startsWith(`!M{PREFIX}stop`)){
         if(!msg.member.voiceChannel){
            var embedstop1 = new Discord.RichEmbed()
                 .setTitle(`**you're not in the voice channel!**`)
@@ -176,7 +179,7 @@ ${videos.map(video2 => `**${++index}-** ${video2.title}`).join('\n')}
             .setColor([226, 50, 41])
         return msg.channel.sendEmbed(embedstop3);
     }
-    else if(msg.content.startsWith(`${PREFIX}song`)){
+    else if(msg.content.startsWith(`!M{PREFIX}song`)){
         if(!serverQueue){
             var embedsong1 = new Discord.RichEmbed()
                 .setTitle(`**It does nothing at the moment!**`)
@@ -194,7 +197,7 @@ Link: ${serverQueue.songs[0].url}
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedsong2); 
     }
-    else if(msg.content.startsWith(`${PREFIX}volume`)){
+    else if(msg.content.startsWith(`!M{PREFIX}volume`)){
         if(!serverQueue){
             var embedvolume1 = new Discord.RichEmbed()
                 .setTitle(`**It does nothing at the moment!**`)
@@ -222,7 +225,7 @@ Link: ${serverQueue.songs[0].url}
             return msg.channel.sendEmbed(embedvolume4);
         }
     }
-    else if(msg.content.startsWith(`${PREFIX}queue`)){
+    else if(msg.content.startsWith(`!M{PREFIX}queue`)){
         if(!serverQueue){
             var embedqueue1 = new Discord.RichEmbed()
                 .setTitle(`**It does nothing at the moment!**`)
@@ -252,7 +255,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
             .setColor([226, 50, 41])
         return msg.channel.sendEmbed(embedpause2);
     }
-    else if(msg.content.startsWith(`${PREFIX}resume`)){
+    else if(msg.content.startsWith(`!M{PREFIX}resume`)){
         if(serverQueue && !serverQueue.playing){
         serverQueue.playing = true;
         serverQueue.connection.dispatcher.resume();
@@ -266,7 +269,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
             .setColor([226, 50, 41])
         return msg.channel.sendEmbed(embedresume2);
     }   
-    else if(msg.content.startsWith(`${PREFIX}mutemusic`)){
+    else if(msg.content.startsWith(`!M{PREFIX}mutemusic`)){
         if(!serverQueue){
         var embedmute1 = new Discord.RichEmbed()
                 .setTitle(`**It does nothing at the moment!**`)
@@ -288,7 +291,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
         return msg.channel.sendEmbed(embedmute3);
         }
     }
-    else if(msg.content.startsWith(`${PREFIX}unmutemusic`)){
+    else if(msg.content.startsWith(`!M{PREFIX}unmutemusic`)){
         if(!serverQueue){
             var embedunmute1 = new Discord.RichEmbed()
                 .setTitle(`**It does nothing at the moment!**`)
@@ -313,16 +316,16 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
     else if(msg.content.startsWith(`${PREFIX}helpmusic`)){
         var embedhelp = new Discord.RichEmbed()
             .setTitle(`__**BlackfoxMusic Commands**__`)
-            .addField("^play [YouTube Link/Playlist]", "Usage: `^play` Description: To play See The YouTube Linke And playlist.", false)
-            .addField("^play [Suchbegriff(e)]", "Usage: `^play`<song name> Description: To play Music.", false)
-            .addField("^skip", "Usage: `^skip` Description: To skip music.", false)
-            .addField("^stop", "Usage: `^stop` Description: To Bot disconnected.", false)
-            .addField("^song", "Usage: `^song` Description: To Check The Current playing song.", false)
-            .addField("^queue", "Usage: `^queue` Description: To Check The Queue List.", false)
-            .addField("^volume", "Usage: `^volume` Description: To See Volume.", false)
-            .addField("^volume [Wert]", "Usage: `^volume` Description: To Changes the volume level to the specified value.", false)
-            .addField("^pause", "Usage: `^pause` Description: To pause The Current Playing Song.", false)
-            .addField("^resume", "Usage: `^resume` Description: To Resume The Paused Song.", false)
+            .addField("!Mplay [YouTube Link/Playlist]", "Usage: `^play` Description: To play See The YouTube Linke And playlist.", false)
+            .addField("!Mplay [Suchbegriff(e)]", "Usage: `^play`<song name> Description: To play Music.", false)
+            .addField("!Mskip", "Usage: `^skip` Description: To skip music.", false)
+            .addField("!Mstop", "Usage: `^stop` Description: To Bot disconnected.", false)
+            .addField("!Msong", "Usage: `^song` Description: To Check The Current playing song.", false)
+            .addField("!Mqueue", "Usage: `^queue` Description: To Check The Queue List.", false)
+            .addField("!Mvolume", "Usage: `^volume` Description: To See Volume.", false)
+            .addField("!Mvolume [Wert]", "Usage: `^volume` Description: To Changes the volume level to the specified value.", false)
+            .addField("!Mpause", "Usage: `^pause` Description: To pause The Current Playing Song.", false)
+            .addField("!Mresume", "Usage: `^resume` Description: To Resume The Paused Song.", false)
             .addField("^mutemusic", "Usage: `^mutemusic` Description: To mute Bot.", false)
             .addField("^unmutemusic", "Usage: `^unmutemusic` Description: To unmute Bot.", false)
             .setColor([226, 50, 41])
@@ -342,7 +345,7 @@ async function handleVideo(video, msg, voiceChannel, playlist=false){
         url: `https://www.youtube.com/watch?v=${video.id}`,
         thumbnail: video.thumbnails.default.url,
         channel: video.channel.title,
-        duration: `${video.duration.hours}hrs : ${video.duration.minutes}min : ${video.duration.seconds}sec`
+        duration: `${video.duration.hours}hrs : !D{video.duration.minutes}min : ${video.duration.seconds}sec`
     };
     if(!serverQueue){
         const queueConstruct = {
@@ -359,7 +362,7 @@ async function handleVideo(video, msg, voiceChannel, playlist=false){
         queueConstruct.songs.push(song);
 
         try{
-            var connection = await voiceChannel.join();
+            var connection = await voiceChannel.join(!D);
             queueConstruct.connection = connection;
             play(msg.guild, queueConstruct.songs[0]);
         }catch(error){
@@ -408,7 +411,7 @@ function play(guild, song){
     dispatcher.setVolume(serverQueue.volume / 2000);
     
     var embedfunction1 = new Discord.RichEmbed()
-                .setTitle(`** Begin ${song.title} to play.** __Note:__ **You should use ^volume 2000 for better sound**`)
+                .setTitle(`** Begin ${song.title} to play.** _!_Note:_D_ **You should use ^volume 2000 for better sound**`)
                 .setColor([226, 50, 41])
             return serverQueue.textChannel.sendEmbed(embedfunction1);
 }
